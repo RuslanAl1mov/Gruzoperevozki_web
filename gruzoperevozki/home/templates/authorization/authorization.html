@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Авторизация</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<link rel='stylesheet prefetch' href="{% static 'css/authorization/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/authorization/style.css' %}">
+	</head>
+
+	<body style="background: url({% static 'img/authorization/bg-2.jpg' %}) center no-repeat;
+				 background-size: cover;
+				 color: #333;
+				 font-size: 18px;
+				 font-family: 'Raleway', sans-serif;">
+	    <div class="container">
+			<header>
+				<h1>
+					<img src="{% static 'img/authorization/logo-1.png' %}" alt="Authentic Collection">
+				</h1>
+			</header>
+			<h1 class="text-registration">Log in</h1>
+			<form class="registration-form" method="POST" action="{% url 'authUser' %}">
+				{% csrf_token %}
+				<label>
+					<span class="label-text">Username</span>
+					<input type="text" name="username">
+				</label>
+
+				<label class="password">
+					<span class="label-text">Пароль</span>
+					<button class="toggle-visibility" title="toggle password visibility" tabindex="-1">
+						<span class="glyphicon glyphicon-eye-close"></span>
+					</button>
+					<input type="password" name="password">
+				</label>
+
+				<div class="text-center">
+					<input class="form_submit" type="submit" name="submit" value="Войти">
+				</div>
+			</form>
+		</div>
+	<script src="{% static 'js/authorization/index.js' %}"></script>
+	</body>
+</html>

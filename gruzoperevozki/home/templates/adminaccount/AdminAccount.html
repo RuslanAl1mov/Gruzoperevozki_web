@@ -1,0 +1,164 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="ru"><head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Страница Администратора</title>
+    <link rel="stylesheet" href="{% static 'css/adminaccount/nicepage.css' %}" media="screen">
+<link rel="stylesheet" href="{% static 'css/adminaccount/AdminAccount.css' %}" media="screen">
+    <script class="u-script" type="text/javascript" src="{% static 'js/adminaccount/jquery.js' %}" defer=""></script>
+    <script class="u-script" type="text/javascript" src="{% static 'js/adminaccount/nicepage.js' %}" defer=""></script>
+
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,400,500,600,700,800,900">
+    
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": ""
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="AdminAccount">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body u-xl-mode" data-lang="ru"><header class="u-clearfix u-header u-header" id="sec-f06d"><div class="u-clearfix u-sheet u-sheet-1">
+        <nav class="u-align-right u-menu u-menu-one-level u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
+              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-b0d1"></use></svg>
+              <svg class="u-svg-content" version="1.1" id="svg-b0d1" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</g></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-unstyled u-nav-1">
+                <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{% url 'clientsList' %}" style="padding: 10px 150px;">Список клиентов</a></li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{% url 'home' %}" style="padding: 10px 150px;">Аккаунт</a></li>
+                <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="{% url 'logOut' %}" style="padding: 10px 145px 10px 150px;">Выйти</a></li>
+            </ul>
+          </div>
+
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
+                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'clientsList' %}" >Список клиентов</a></li>
+                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'home' %}" >Аккаунт</a></li>
+                    <li class="u-nav-item"><a class="u-button-style u-nav-link" href="{% url 'logOut' %}" >Выйти</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-clearfix u-section-1" id="sec-8802">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-custom-font u-font-roboto-slab u-text u-text-default u-text-palette-5-dark-1 u-text-1">Аккаунт Грузоперевозчика<br>
+        </h1>
+        <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
+          <div class="u-layout">
+            <div class="u-layout-col">
+              <div class="u-size-60">
+                <div class="u-layout-row">
+                  <div class="u-container-style u-layout-cell u-left-cell u-radius-21 u-size-19 u-layout-cell-1" src="">
+                    <div class="u-container-layout u-valign-top u-container-layout-1">
+                      <img class="u-image u-image-round u-preserve-proportions u-radius-10 u-image-1" src="{% static 'img/adminaccount/user_icon.png' %}" alt="" data-image-width="1280" data-image-height="1280">
+                    </div>
+                  </div>
+                  <div class="u-align-left u-container-style u-layout-cell u-right-cell u-size-41 u-layout-cell-2">
+                    <div class="u-container-layout u-container-layout-2">
+                      <h2 class="u-text u-text-2">Admin</h2>
+                      <p class="u-text u-text-3">admin@gamil.com</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-list u-list-1">
+          <div class="u-repeater u-repeater-1">
+            <div class="u-align-left u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-3">
+                <h4 class="u-custom-item u-text u-text-4">Всего отправленных грузов:</h4>
+              </div>
+            </div>
+            <div class="u-align-left u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-4">
+                <h4 class="u-custom-item u-text u-text-5">200<br>
+                </h4>
+              </div>
+            </div>
+            <div class="u-align-left u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-5">
+                <h4 class="u-custom-item u-text u-text-6">Неотправленных грузов:</h4>
+              </div>
+            </div>
+            <div class="u-align-left u-container-style u-list-item u-repeater-item">
+              <div class="u-container-layout u-similar-container u-container-layout-6">
+                <h4 class="u-custom-item u-text u-text-7">200</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-expanded-width u-tab-links-align-left u-tabs u-tabs-1">
+          <ul class="u-border-2 u-border-palette-1-base u-spacing-10 u-tab-list u-unstyled" role="tablist">
+            <li class="u-tab-item" role="presentation">
+            </li>
+          </ul>
+          <div class="u-tab-content">
+            <div class="u-container-align-center u-container-style u-tab-active u-tab-pane u-white u-tab-pane-1" id="tab-0da5" role="tabpanel" aria-labelledby="link-tab-0da5">
+              <div class="u-container-layout u-valign-top u-container-layout-7">
+                <h2 class="u-text u-text-default u-text-8">Ваши заказы</h2>
+                <div class="u-expanded-width u-table u-table-responsive u-table-1">
+                  <table class="u-table-entity">
+                    <colgroup>
+                      <col width="25%">
+                      <col width="25%">
+                      <col width="25%">
+                      <col width="25%">
+                    </colgroup>
+                    <tbody class="u-table-alt-grey-5 u-table-body">
+                      <tr style="height: 51px;">
+                        <td class="u-table-cell">Название</td>
+                        <td class="u-table-cell">Время получения</td>
+                        <td class="u-table-cell">Время отправки</td>
+                        <td class="u-table-cell">Статус<br>
+                        </td>
+                      </tr>
+
+                      {% for gruz in gruzi %}
+              <tr style="height: 48px;">
+                <td class="u-table-cell">{{ gruz.name }}</td>
+                <td class="u-table-cell">{{ gruz.manufacture_time }}</td>
+
+                <td class="u-table-cell">{{ gruz.sent_to_position_date }}</td>
+                  {% if gruz.sent_to_position_date == None %}
+                <td class="u-table-cell">Ждет отправки</td>
+                  {% else %}
+                  <td class="u-table-cell">Доставлено</td>
+                  {% endif %}
+              </tr>
+            {% endfor %}
+
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+
+</body></html>
